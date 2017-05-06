@@ -11,7 +11,6 @@ public class Question {
 
     public Question(int textResourceId, boolean answerTrue) {
         mTextResourceId = textResourceId;
-
         mAnswerTrue = answerTrue;
     }
 
