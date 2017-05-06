@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
 
-    <string name="question_text">Constantinople is the largest city in Turkey?</string>
-
     //now when you refer to this true_botton string you will get the literal string "TRUE"
     <string name="true_button">TRUE</string>
     <string name="false_button">FALSE</string>
 
     <string name="correct_toast">CORRECT!</string>
     <string name="incorrect_toast">Wrong. Try again.</string>
+    <string name="next_button">NEXT</string>
+    <string name="back_button">BACK</string>
+    <string name="question1">THE PACIFIC OCEAN IS LARGER THAN THE ATLANTIC OCEAN</string>
+    <string name="question2">THE SUEZ CANAL CONNECTS THE RED SEA AND THE INDIAN OCEAN</string>
+    <string name="question3">THE SOURCE OF THE NILE RIVER IS IN EGYPT</string>
+    <string name="question4">THE AMAZON RIVER IS THE LONGEST RIVER IN NORTH AND SOUTH AMERICA</string>
+    <string name="question5">LAKE BAIKAL IS THE WORLD\'S OLDEST AND DEEPEST FRESHWATER LAKE</string>
+
 </resources>
