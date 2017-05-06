@@ -17,7 +17,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView mQuestionTextView;
 
     //TODO move this out of the controller and into a separate class
-    private Question[] mQuestionBank = new Question[] {
+    private Question[] mQuestionBank = new Question[]{
             new Question(R.string.question1, true),
             new Question(R.string.question2, false),
             new Question(R.string.question3, false),
@@ -27,6 +27,10 @@ public class QuizActivity extends AppCompatActivity {
 
     private int mCurrentIndex = 0;
 
+    private void updateQuestion() {
+        int question = mQuestionBank[mCurrentIndex].getTextResourceId();
+        mQuestionTextView.setText(question);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +56,18 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
-        int question = mQuestionBank[mCurrentIndex].getTextResourceId();
-        mQuestionTextView.setText(question);
+
+        mNextButton = (Button) findViewById(R.id.next_button);
+        mNextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                updateQuestion();
+            }
+        });
+
+        updateQuestion();
+
     }
 }
+
